@@ -67,17 +67,23 @@ end
 
 Then /^I should see only movies rated: "(.*?)"$/ do |arg1|
     #remove this statement after implementing the test step
-   
-  expect(result).to be_truthy
+    bool = false
+    rows = page.all("table#movies tbody tr td[2]").map {|t| t.text}.each do |r|
+     bool = false
+     arg1.split(", ").each do |rating|
+       if r == rating
+           bool = true;
+           break
+       end
+     end
+     break if bool == false
+    end
 end
 
 Then /^I should see all of the movies$/ do
     #remove this statement after implementing the test step
-    rows = 0
-    all("tr").each do |tr|
-     rows += 1
-    end
-    rows.should == 11
+    rows = page.all("table#movies tbody tr td[1]").map {|t| t.text}
+    rows.size == Movie.all.count
 end
 
 
