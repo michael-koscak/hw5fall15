@@ -1238,3 +1238,1661 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
   Rendered movies/index.html.haml within layouts/application (9.4ms)
 Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 129.255.227.168 at 2015-10-20 16:31:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 26ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 129.255.227.168 at 2015-10-20 16:31:40 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 213ms (Views: 201.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 129.255.227.168 at 2015-10-20 16:32:19 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 59ms (Views: 54.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 129.255.227.168 at 2015-10-20 16:32:19 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 129.255.227.168 at 2015-10-20 17:24:43 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 129.255.227.168 at 2015-10-20 17:24:43 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.255.227.168 at 2015-10-20 17:24:43 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.255.227.168 at 2015-10-20 17:24:43 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 129.255.227.168 at 2015-10-20 17:24:43 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 129.255.227.168 at 2015-10-20 17:24:43 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 129.255.227.168 at 2015-10-20 17:24:43 +0000
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 19:43:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (29.5ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `search_tmdb_path' for #<#<Class:0x007fc1fc94ceb8>:0x007fc1fc94c3a0>):
+    27: 
+    28: %br
+    29: %div.colored_text Search for movie titles containing:
+    30: = form_tag search_tmdb_path, :method => :post do
+    31:   = text_field :search_terms, 'term'
+    32:   = submit_tag 'Search TMDb'
+    33: %br
+  app/views/movies/index.html.haml:30:in `_app_views_movies_index_html_haml___4690327903239715_38537160'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.5ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 19:48:46 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 218ms (Views: 213.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 19:48:47 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 19:48:47 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 19:48:47 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 19:48:47 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 19:48:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 19:48:47 +0000
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 19:51:22 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 19:51:22 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:22 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:22 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 19:51:22 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:22 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:22 +0000
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 19:51:40 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 19:51:41 +0000
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 19:51:41 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:41 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:41 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:41 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 19:51:41 +0000
+
+
+Started GET "/search_tmdb" for 73.50.236.214 at 2015-10-24 19:52:18 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search_tmdb"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.3ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 19:52:48 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 19:58:19 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zom7N5xFu8oVUXT2OxDs3s2Z2smo2AEWGl2wPJNu31bVJXPyWJxNodeWDEHKcR02VWQDnNwTiWCKlT5aM2aX9A==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 1530ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:02:39 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zom7N5xFu8oVUXT2OxDs3s2Z2smo2AEWGl2wPJNu31bVJXPyWJxNodeWDEHKcR02VWQDnNwTiWCKlT5aM2aX9A==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 2974ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    2: 
+    3: = form_tag add_tmdb_path do
+    4:     %table#movies
+    5:       %thead
+    6:         %tr
+    7:           %th Movie Title
+    8:           %th Rating
+  app/views/movies/search_tmdb.html.haml:5
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:03:58 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zom7N5xFu8oVUXT2OxDs3s2Z2smo2AEWGl2wPJNu31bVJXPyWJxNodeWDEHKcR02VWQDnNwTiWCKlT5aM2aX9A==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 1488ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 20:04:00 +0000
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 20:04:00 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 20:04:00 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 20:04:00 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 20:04:00 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 20:04:00 +0000
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:14:28 +0000
+
+AbstractController::ActionNotFound (The action 'add_tmdb' could not be found for MoviesController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:15:47 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search_tmdb"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.4ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 20:15:54 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:15:59 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1tHRu1ApPL8XgamlykpSSnpmvF+obHvdxvruWaPoqXllfRl+lPDK1NVG0RI7K6Oi4ptlCtyn86tWMmA/A+Dh2w==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 3243ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:16:05 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jQUy/Oge+rO/66ClZkfRZ7ZJEMloILycW7+ntPaoGwQ+qfo5LMcM2H0s2BKXJiCPLrTJnBzrNOrLdynSVqBTpg==", "commit"=>"Add Selected Movies"}
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:16:05 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:17:08 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 43ms (Views: 37.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 20:17:09 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 20:17:09 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 20:17:09 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 20:17:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 20:17:09 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 20:17:09 +0000
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:17:12 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vb23D52Llc5rMKOYG7bbkQOGpbDCXlG832T3IugFQSjmEX/KWVJjpan32y/q1yp5m3t85baV2cpPrHlESA0Jig==", "search_terms"=>{"term"=>"ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 1795ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:17:16 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"98un6Fxg5q4sB3myY25Ycom0g4xDpIvWItP0KnUWkutEZ28tmLkQxe7AAQWSD6maEUla2TdvA6CyG3pM1R7aSQ==", "commit"=>"Add Selected Movies"}
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:17:16 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:19:18 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BVg0z91qZY3PM/ED93Y9CKkLU2kgi6gv5B078Qdmn1q29PwKGbOT5g30ibQGF8zgMfaKPFRAIFl01bWXp27X+A==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 1630ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:19:19 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BVg0z91qZY3PM/ED93Y9CKkLU2kgi6gv5B078Qdmn1q29PwKGbOT5g30ibQGF8zgMfaKPFRAIFl01bWXp27X+A==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 1619ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:20:51 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cdU7bFdCJ6FzQzgWDlW2/qCkMWhVjXX2Ncmoo1bjhKzCefOpk5vRyrGEQKH/NEcWOFnoPSFG/YClASbF9uvMDg==", "commit"=>"Add Selected Movies"}
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:20:51 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:20:59 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ki4WRpmvK87sUadTaaKI2gngkR3G0WkdcvHy0qCuD9SZgt6DXXbdpS6W3+SYw3kykR1ISLIa4WviOXy0AKZHdg==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 1864ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:21:40 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wGK1E1oAOtGYALC9mai2K6gAAL5evXCZo7fkrEHY6BNzzn3WntnMulrHyApoyUfDMP3Z6yp2+O8zf2rK4dCgsQ==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `keys' for ["1"]:Array):
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:22:44 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wGK1E1oAOtGYALC9mai2K6gAAL5evXCZo7fkrEHY6BNzzn3WntnMulrHyApoyUfDMP3Z6yp2+O8zf2rK4dCgsQ==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `key' for "1":String):
+  app/controllers/movies_controller.rb:89:in `block in add_tmdb'
+  app/controllers/movies_controller.rb:88:in `each'
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.5ms)
+
+
+Started GET "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:23:28 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search_tmdb"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.0ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 20:23:33 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:23:36 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jXMhCfs234mGI2GNPc4Oa+AbY5gTlINHvNW52bclkUg+3+nMP+8p4kTkGTrMr/+DeOa6zWdfCzEsHTe/Fy3Z6g==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 1812ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:23:41 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8o4/rIYNHoNp9RHXPAE2LdoIF/9oz8W4946zi9DhNwdBIvdpQtTo6KsyaWDNYMfFQvXOqhwETc5nRj3tcOl/pQ==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `tmdb_id' for "1":String):
+  app/controllers/movies_controller.rb:89:in `block in add_tmdb'
+  app/controllers/movies_controller.rb:88:in `each'
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:32:14 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8o4/rIYNHoNp9RHXPAE2LdoIF/9oz8W4946zi9DhNwdBIvdpQtTo6KsyaWDNYMfFQvXOqhwETc5nRj3tcOl/pQ==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `keys' for ["1"]:Array):
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:32:29 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search_tmdb"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.9ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 20:32:31 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:32:37 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YKCufA4R3NUpPbBz9IxKdCzN3gKF/d0LHOD7f6IH7G3TDGa5ysgqvuv6yMQF7buctDAHV/E2VX2MKHUZAg+kzw==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 1559ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:32:42 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DmPUv5mxLyb//aPvfH6ZabW2H87re+Xck+TuCnf0Xgm9zxx6XWjZTT0621iNH2iBLUvGm5+wbaoDLGBs1/wWqw==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `keys' for ["1"]:Array):
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.9ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:34:29 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DmPUv5mxLyb//aPvfH6ZabW2H87re+Xck+TuCnf0Xgm9zxx6XWjZTT0621iNH2iBLUvGm5+wbaoDLGBs1/wWqw==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `keys' for ["1"]:Array):
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.3ms)
+
+
+Started GET "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:34:50 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search_tmdb"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.7ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 20:34:52 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 73.50.236.214 at 2015-10-24 20:34:55 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:34:55 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:35:01 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fPiZx886ZS0xaqv+PzZmoXEO44Z3hCI3NFBFE8Os78jPVFECC+OTRvOt00nOV5dJ6fM60wNPqkGkmMt1Y6Snag==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 2151ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:35:09 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z2/khNdxehNEJt6/UWAKWeqRhoG/5MWPXhpoLAjY7qTUwyxBE6iMeIbhpgigAfuxcmxf1MsvTfnO0uZKqNCmBg==", "tmdb_movies"=>{"86773"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ted & Venus"], ["description", "Ted Whitley (Bud Cort) is a poet who is stalking the woman of his dreams, Linda Turner (Kim Adams). She was volunteering at a community resource project when he came in to find out about low cost housing."], ["release_date", "1991-08-08 00:00:00.000000"], ["created_at", "2015-10-24 20:35:11.235075"], ["updated_at", "2015-10-24 20:35:11.235075"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1754ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:35:11 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:35:11 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 73.50.236.214 at 2015-10-24 20:35:18 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/new" for 73.50.236.214 at 2015-10-24 20:35:24 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 73.50.236.214 at 2015-10-24 20:35:28 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qTviTsWPzK7957I2oOrO945yM3NvyMS6fGG338terBIalyqLAVY6xT8gyoFRiz8fFo/qJhsDTMzsqTm5a1bksA==", "movie"=>{"title"=>"Ted", "rating"=>"G", "release_date(1i)"=>"2015", "release_date(2i)"=>"10", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ted"], ["rating", "G"], ["release_date", "2015-10-24 00:00:00.000000"], ["created_at", "2015-10-24 20:35:28.416362"], ["updated_at", "2015-10-24 20:35:28.416362"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 12ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:35:28 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:35:28 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:35:34 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYvmnsx4ySVyYXJ3auVtcabIIrJRPuiSUw3RSdqsCNXaJy5bCKE/TrCmCsCbhJyZPjX75yX1YOTDxV8veqRAdw==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 2046ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:35:41 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IReKdX7xMs8PO95HzA9+0BnDHLU7bwU/GlAIsTn6DdSSu0KwuijEpM38pvA9bo84gT7F4E+kjUmKmIbXmfJFdg==", "tmdb_movies"=>{"34081"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ted Bundy"], ["description", "Docu-drama based on the life of Ted Bundy, a serial killer who killed at least 19 young women during the 1970's (though some sources say as many as 30 to 35 were murdered). Set from his college student years, to his first victims, his capture, escape from prison (twice), his final killing spree to his trial, conviction and execution."], ["release_date", "2002-11-22 00:00:00.000000"], ["created_at", "2015-10-24 20:35:43.418868"], ["updated_at", "2015-10-24 20:35:43.418868"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 2057ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:35:43 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:35:43 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 73.50.236.214 at 2015-10-24 20:35:46 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:38:18 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d8PIsBuqMh72gk2zzjbTfesoIWBFGyY/PkYqZNew4iPEbwB133PEdTRFNQQ/VyKVc9X4NTHQrkmujqQCd7iqgQ==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 1494ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:38:24 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gKdWAneyYAsQEcOjjPWxy3sEFv2V2yca2SgS6Mev2NMzC57Hs2uWYNLWuxR9lEAj4/nPqOEQr2xJ4JyOZ6eQcQ==", "tmdb_movies"=>{"288016"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Helen, Fred und Ted"], ["release_date", "2006-09-13 00:00:00.000000"], ["created_at", "2015-10-24 20:38:26.256876"], ["updated_at", "2015-10-24 20:38:26.256876"]]
+  [1m[35m (7.9ms)[0m  commit transaction
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1558ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:38:26 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:38:26 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+  [1m[36mMovie Load (1.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35mSQL (8.4ms)[0m  DELETE FROM "movies"
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:39:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 177ms (Views: 160.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 20:39:48 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 20:39:48 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 20:39:48 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 20:39:48 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 20:39:48 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 20:39:48 +0000
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:39:54 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GePKTz1xfQCfUriaSS41n16eVdn0UCBh+T7QuyvTw76qTwKK+aiLa12VwC24T8R3xmOMjICbqBdp9l7di9uLHA==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 1388ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:40:02 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uA8swPRnQWeqyZTKhtEsoCn+81dm8c98hEO2+woN3HILo+QFML63DGgO7H13sN1IsQMqAhI6RwoUizidqgWU0A==", "tmdb_movies"=>{"34081"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ted Bundy"], ["description", "Docu-drama based on the life of Ted Bundy, a serial killer who killed at least 19 young women during the 1970's (though some sources say as many as 30 to 35 were murdered). Set from his college student years, to his first victims, his capture, escape from prison (twice), his final killing spree to his trial, conviction and execution."], ["release_date", "2002-11-22 00:00:00.000000"], ["created_at", "2015-10-24 20:40:04.616790"], ["updated_at", "2015-10-24 20:40:04.616790"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1679ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:40:04 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:40:04 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for 73.50.236.214 at 2015-10-24 20:40:15 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 73.50.236.214 at 2015-10-24 20:40:19 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pem9N2purOih2CCPbJb2/mUToXjzfWJK1qSqlOm2vjOORXXyrrdag2MfWDid9wcW/e54LYe26jxGbCTySb72kQ==", "movie"=>{"title"=>"Michael", "rating"=>"G", "release_date(1i)"=>"2015", "release_date(2i)"=>"10", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Michael"], ["rating", "G"], ["release_date", "2015-10-24 00:00:00.000000"], ["created_at", "2015-10-24 20:40:19.921624"], ["updated_at", "2015-10-24 20:40:19.921624"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 13ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:40:20 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:40:20 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+  [1m[36mMovie Load (1.8ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+
+
+Started GET "/movies/17" for 73.50.236.214 at 2015-10-24 20:44:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 17]]
+  Rendered movies/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 180ms (Views: 156.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 20:44:35 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 20:44:35 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 20:44:35 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 20:44:35 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 20:44:35 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 20:44:36 +0000
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:44:42 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:44:42 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:44:51 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+0z5cid1ff+AY4Pc2X00cdXb6ykYqqPooZbO4pLRLr8QfsgDEQjnDzG9riCBAU5X6q2+dCpIvkyTtVdKkMMGA==", "search_terms"=>{"term"=>"ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 1442ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 20:47:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 20:47:09 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:47:09 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 197ms (Views: 186.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:47:12 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"me/QY4STYmt6UsMUhpDW7kRFF9mIks8jpDhs4fLwjqAqQximQEqUALiVu6N38ScG3LjOjPxZR1U08OKHUvjGAg==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+Completed 500 Internal Server Error in 1844ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `rating' for #<Tmdb::Movie:0x007fc4f5f1d738>):
+  app/models/movie.rb:21:in `block in find_in_tmdb'
+  app/models/movie.rb:16:in `each'
+  app/models/movie.rb:16:in `find_in_tmdb'
+  app/controllers/movies_controller.rb:73:in `search_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 20:50:44 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:50:44 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 20:52:40 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9jla0220uO9CLRCCUg+GGbagnN+IWAU4EmPDQ6Q+omAdC2uiW8kiH/PzPX4Kc/w/idbJgrq6GJwgQFrrpiyKw==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 1673ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 20:52:47 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2nyB3NkiRJEroO4WKN7f71oUepVK/TZioPjqQjB4axBp0EkZHfuy+ulnlqHZvy4HwumjwD42vhQwMGQkkHAjsg==", "tmdb_movies"=>{"337129"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ted Nugent: Rockpalast 1976"], ["description", "Live in Dortmund"], ["release_date", "1976-08-09 00:00:00.000000"], ["created_at", "2015-10-24 20:52:49.352221"], ["updated_at", "2015-10-24 20:52:49.352221"]]
+  [1m[35m (7.9ms)[0m  commit transaction
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1514ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:52:49 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:52:49 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/new" for 73.50.236.214 at 2015-10-24 20:53:10 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 73.50.236.214 at 2015-10-24 20:53:14 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3T691KHXzH/z9xr23kLv0XA56hT+i0hai5Jx+7J7yABuknURZQ46FDEwYkEvIx456MQzQYpAwCwbWv+dEnOAog==", "movie"=>{"title"=>"Michael2", "rating"=>"G", "release_date(1i)"=>"2015", "release_date(2i)"=>"10", "release_date(3i)"=>"24"}, "commit"=>"Save Changes"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Michael2"], ["rating", "G"], ["release_date", "2015-10-24 00:00:00.000000"], ["created_at", "2015-10-24 20:53:14.773803"], ["updated_at", "2015-10-24 20:53:14.773803"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 14ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 20:53:14 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 20:53:14 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 21:27:04 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 73.50.236.214 at 2015-10-24 21:27:04 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 73.50.236.214 at 2015-10-24 21:27:04 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 73.50.236.214 at 2015-10-24 21:27:04 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 73.50.236.214 at 2015-10-24 21:27:04 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 73.50.236.214 at 2015-10-24 21:27:04 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.50.236.214 at 2015-10-24 21:27:04 +0000
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 21:27:09 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gu9Pd6/AumG3uRb0uHoNCpxt8UNDNjex7dgAhv50woqpQ4eyaxlMCnV+bkNJG/ziBJAoFjf9v8d9EI7gXnyKKA==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 1898ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 21:27:20 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aii2Qsu9MDLPXDZABUj/n/qNyFDqB0A+mRZrgQa9jLbZhH6HD2TGWQ2bTvf0KQ53YnARBZ7MyEgJ3uXnprXEFA==", "tmdb_movies"=>{"185721"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ted Baryluk's Grocery"], ["description", "Ukrainian-Canadian Ted Baryluk's grocery store has been a fixture in Winnipeg's North End for over 20 years. In this photo study, Ted talks about his store, the customers who have come and gone and the social changes his multicultural neighbourhood has seen. But most of all he wonders what will become of his store after he retires. He hopes his daughter will take over, but she wants to move away. The film is a wistful rendering of a shopkeeper's relationship with his daughter and a fascinating portrait of a neighbourhood and its inhabitants."], ["release_date", "1982-09-30 00:00:00.000000"], ["created_at", "2015-10-24 21:27:21.777008"], ["updated_at", "2015-10-24 21:27:21.777008"]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1437ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 21:27:21 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 21:27:21 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 21:27:53 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zieiap3hdJ3C+tj+8pK08oYcm9yEBCchkgWdOcuxGSjVi2qvWTiC9gA9oEkD80UaHuFCifDPr1cCzRNfa7lRig==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 1374ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 73.50.236.214 at 2015-10-24 21:27:59 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KP43zetQP3cH7JQS10lvASqohPpPEbqlz1AcrjTTFKqbUv8IL4nJHMUr7KUmKJ7pslVdrzvaMtNfmJLIlNtcCA==", "tmdb_movies"=>{"86773"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ted & Venus"], ["description", "Ted Whitley (Bud Cort) is a poet who is stalking the woman of his dreams, Linda Turner (Kim Adams). She was volunteering at a community resource project when he came in to find out about low cost housing."], ["release_date", "1991-08-08 00:00:00.000000"], ["created_at", "2015-10-24 21:28:01.180641"], ["updated_at", "2015-10-24 21:28:01.180641"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 1475ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/movies" for 73.50.236.214 at 2015-10-24 21:28:01 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 21:28:01 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.4ms)
+  [1m[36mMovie Load (1.8ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 21:32:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 73.50.236.214 at 2015-10-24 21:32:05 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 73.50.236.214 at 2015-10-24 21:32:05 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (20.8ms)
+Completed 200 OK in 243ms (Views: 232.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 21:32:08 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sbTPni0l1IEkR2Fyoht71AYkJ8H0p15aGY+THVzJC2sCGAdb6fwi6uaAGcVTeoo8ntn+lIBs1iyJRx17/MFDyQ==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+Completed 500 Internal Server Error in 1581ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `tmdb_id' for #<Tmdb::Movie:0x007f81d26951d0>):
+  app/models/movie.rb:18:in `block in find_in_tmdb'
+  app/models/movie.rb:16:in `each'
+  app/models/movie.rb:16:in `find_in_tmdb'
+  app/controllers/movies_controller.rb:73:in `search_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.4ms)
+
+
+Started POST "/search_tmdb" for 73.50.236.214 at 2015-10-24 21:34:39 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sbTPni0l1IEkR2Fyoht71AYkJ8H0p15aGY+THVzJC2sCGAdb6fwi6uaAGcVTeoo8ntn+lIBs1iyJRx17/MFDyQ==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 1908ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.255.224.166 at 2015-10-25 21:24:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.255.224.166 at 2015-10-25 21:24:19 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:24:19 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 199ms (Views: 191.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 129.255.224.166 at 2015-10-25 21:24:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:20 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.255.224.166 at 2015-10-25 21:24:20 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:20 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:20 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.127379"], ["updated_at", "2015-10-25 21:24:31.127379"]]
+  [1m[35m (8.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.140166"], ["updated_at", "2015-10-25 21:24:31.140166"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.148380"], ["updated_at", "2015-10-25 21:24:31.148380"]]
+  [1m[35m (5.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.155649"], ["updated_at", "2015-10-25 21:24:31.155649"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.162670"], ["updated_at", "2015-10-25 21:24:31.162670"]]
+  [1m[35m (7.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.171379"], ["updated_at", "2015-10-25 21:24:31.171379"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.182250"], ["updated_at", "2015-10-25 21:24:31.182250"]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.190494"], ["updated_at", "2015-10-25 21:24:31.190494"]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.199135"], ["updated_at", "2015-10-25 21:24:31.199135"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2015-10-25 21:24:31.205061"], ["updated_at", "2015-10-25 21:24:31.205061"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.459241"], ["updated_at", "2015-10-25 21:24:35.459241"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.473305"], ["updated_at", "2015-10-25 21:24:35.473305"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.481289"], ["updated_at", "2015-10-25 21:24:35.481289"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.488700"], ["updated_at", "2015-10-25 21:24:35.488700"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.495731"], ["updated_at", "2015-10-25 21:24:35.495731"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.502888"], ["updated_at", "2015-10-25 21:24:35.502888"]]
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.508778"], ["updated_at", "2015-10-25 21:24:35.508778"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.516293"], ["updated_at", "2015-10-25 21:24:35.516293"]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.523349"], ["updated_at", "2015-10-25 21:24:35.523349"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2015-10-25 21:24:35.530360"], ["updated_at", "2015-10-25 21:24:35.530360"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:24:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (27.7ms)
+Completed 200 OK in 197ms (Views: 180.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 129.255.224.166 at 2015-10-25 21:24:42 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:42 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:42 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.255.224.166 at 2015-10-25 21:24:42 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:42 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 129.255.224.166 at 2015-10-25 21:24:42 +0000
+
+
+Started POST "/search_tmdb" for 129.255.224.166 at 2015-10-25 21:24:52 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0JEGjzRmUaWBiuaKEICiFwcaTDRWpjD81vZxVDwVjURjPc5K8L+nzkNNnj3h4VP/n+eVYSJtuIpGPv8ynB3F5g==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 133ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:25:01 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WdcZPgimc9QY/UKoukrzuFEwKPcUOPBFM4AuEYUAYnvqe9H7zH+Fv9o6Oh9LKwJQyc3xomDzeDOjSKB3JQgq2Q==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `keys' for ["1"]:Array):
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.8ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:25:59 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WdcZPgimc9QY/UKoukrzuFEwKPcUOPBFM4AuEYUAYnvqe9H7zH+Fv9o6Oh9LKwJQyc3xomDzeDOjSKB3JQgq2Q==", "tmdb_movies"=>["1"], "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `keys' for ["1"]:Array):
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/" for 129.255.224.166 at 2015-10-25 21:30:37 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:30:37 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/search_tmdb" for 129.255.224.166 at 2015-10-25 21:30:41 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bWnu2XArs6SQJaHAtLSq3CGGI5ClzhlHzrqFcFYrUtnexSYctPJFz1Li2XdF1Vs0uXv6xdEFkTFecgsW9iMaew==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 112ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:30:45 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6T+rPd95+UYYOTq2m/GSYJMJVyt0045jTcjfC36A/M1ak2P4G6APLdr+QgFqkGOIC/SOfgAYBhXdAFFt3oi0bw==", "tmdb_movies"=>{"86773"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ted & Venus"], ["description", "Ted Whitley (Bud Cort) is a poet who is stalking the woman of his dreams, Linda Turner (Kim Adams). She was volunteering at a community resource project when he came in to find out about low cost housing."], ["release_date", "1991-08-08 00:00:00.000000"], ["created_at", "2015-10-25 21:30:45.797124"], ["updated_at", "2015-10-25 21:30:45.797124"]]
+  [1m[35m (8.4ms)[0m  commit transaction
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 103ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/movies" for 129.255.224.166 at 2015-10-25 21:30:45 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:30:45 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (9.0ms)[0m  [1mDELETE FROM "movies"[0m
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:31:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 173ms (Views: 156.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 129.255.224.166 at 2015-10-25 21:31:15 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.255.224.166 at 2015-10-25 21:31:15 +0000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 129.255.224.166 at 2015-10-25 21:31:15 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 129.255.224.166 at 2015-10-25 21:31:15 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 129.255.224.166 at 2015-10-25 21:31:15 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 129.255.224.166 at 2015-10-25 21:31:15 +0000
+
+
+Started POST "/search_tmdb" for 129.255.224.166 at 2015-10-25 21:31:18 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lui0NZbjPxSIv8PtcLmcUtLhRv3AwA5+KeVBnOhjuAUlRHzwUjrJf0p4u1qB2G26ShyfqLQLhgi5Lc/6SGvwpw==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 102ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:31:22 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCeJqJyUVLLe0U+lnT30p9khRlcqKgVCM9hfw4H7n9qbi0FtWE2i2RwWNxJsXAVPQdyfAl7hjTSjENGlIfPXeA==", "tmdb_movies"=>{"72105"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ted"], ["description", "Family Guy creator Seth MacFarlane brings his boundary-pushing brand of humor to the big screen for the first time as writer, director and voice star of Ted. In the live action/CG-animated comedy, he tells the story of John Bennett, a grown man who must deal with the cherished teddy bear who came to life as the result of a childhood wish, and has refused to leave his side ever since."], ["release_date", "2012-06-29 00:00:00.000000"], ["created_at", "2015-10-25 21:31:22.975889"], ["updated_at", "2015-10-25 21:31:22.975889"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 94ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/movies" for 129.255.224.166 at 2015-10-25 21:31:23 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:31:23 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+  [1m[36mMovie Load (2.0ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+
+
+Started GET "/" for 129.255.224.166 at 2015-10-25 21:33:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:33:34 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (14.2ms)
+Completed 200 OK in 214ms (Views: 203.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/search_tmdb" for 129.255.224.166 at 2015-10-25 21:33:39 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ry0Bpi1FCPHj/fSx/OI9Pxa2hvd8umg+rGutl9+Cu570gclj6Zz+miE6jAYNg8zXjktfoghx4Eg8oyPxf4rzPA==", "search_terms"=>{"term"=>"ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 110ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:33:44 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E38dyEHGzxgFtcd+FLO5cmMbjTtHmGCS+flbv2X3mLyg09UNhR85c8dyv8nl0kia++ZUbjNT6ORpMdXZxf/QHg==", "tmdb_movies"=>{"281458"=>"1"}, "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `create!' for #<Movie:0x007f8aa274ce10>):
+  app/models/movie.rb:37:in `create_from_tmdb'
+  app/controllers/movies_controller.rb:89:in `block in add_tmdb'
+  app/controllers/movies_controller.rb:88:in `each'
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:34:27 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E38dyEHGzxgFtcd+FLO5cmMbjTtHmGCS+flbv2X3mLyg09UNhR85c8dyv8nl0kia++ZUbjNT6ORpMdXZxf/QHg==", "tmdb_movies"=>{"281458"=>"1"}, "commit"=>"Add Selected Movies"}
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `title=' for {}:Hash):
+  app/models/movie.rb:33:in `create_from_tmdb'
+  app/controllers/movies_controller.rb:89:in `block in add_tmdb'
+  app/controllers/movies_controller.rb:88:in `each'
+  app/controllers/movies_controller.rb:88:in `add_tmdb'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.3ms)
+
+
+Started GET "/search_tmdb" for 129.255.224.166 at 2015-10-25 21:35:31 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search_tmdb"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.2ms)
+
+
+Started POST "/search_tmdb" for 129.255.224.166 at 2015-10-25 21:35:34 +0000
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ry0Bpi1FCPHj/fSx/OI9Pxa2hvd8umg+rGutl9+Cu570gclj6Zz+miE6jAYNg8zXjktfoghx4Eg8oyPxf4rzPA==", "search_terms"=>{"term"=>"ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 103ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:35:39 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+8HkdKdpIBtvvD58u1Pj0CGJSs64yILMFVCyIYxfJD1IbSyxY7DWcK17RstKMhI4uXSTm8wDCrqFmDxHLFdsnw==", "tmdb_movies"=>{"214756"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ted 2"], ["description", "Newlywed couple Ted and Tami-Lynn want to have a baby, but in order to qualify to be a parent, Ted will have to prove he's a person in a court of law."], ["release_date", "2015-06-26 00:00:00.000000"], ["created_at", "2015-10-25 21:35:39.542583"], ["updated_at", "2015-10-25 21:35:39.542583"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 103ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/movies" for 129.255.224.166 at 2015-10-25 21:35:39 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:35:39 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+  [1m[36mMovie Load (1.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+
+
+Started POST "/search_tmdb" for 129.255.224.166 at 2015-10-25 21:36:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#search_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MnGedVJ2/1fnXi4XNoX2NCb6mAN1JXQTifcZrVDlT2KB3Vawlq8JPCWZVqDH5AfcvgdBVgHu/GUZP5fL8O0HwA==", "search_terms"=>{"term"=>"Ted"}, "commit"=>"Search TMDb"}
+  Rendered movies/search_tmdb.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 297ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/add_tmdb" for 129.255.224.166 at 2015-10-25 21:36:53 +0000
+Processing by MoviesController#add_tmdb as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mw9ApZc66TdPt3TwGxwDadLVvotm0/cCoK35OtdtZ4qAo4hgU+MfXI1wDEfqffKBSihn3hIYf3QwZXdcd2UvKA==", "tmdb_movies"=>{"185721"=>"1"}, "commit"=>"Add Selected Movies"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "description", "release_date", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ted Baryluk's Grocery"], ["description", "Ukrainian-Canadian Ted Baryluk's grocery store has been a fixture in Winnipeg's North End for over 20 years. In this photo study, Ted talks about his store, the customers who have come and gone and the social changes his multicultural neighbourhood has seen. But most of all he wonders what will become of his store after he retires. He hopes his daughter will take over, but she wants to move away. The film is a wistful rendering of a shopkeeper's relationship with his daughter and a fascinating portrait of a neighbourhood and its inhabitants."], ["release_date", "1982-09-30 00:00:00.000000"], ["rating", "R"], ["created_at", "2015-10-25 21:36:53.089008"], ["updated_at", "2015-10-25 21:36:53.089008"]]
+  [1m[35m (8.9ms)[0m  commit transaction
+Redirected to https://selt-michael-koscak.c9.io/movies
+Completed 302 Found in 98ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/movies" for 129.255.224.166 at 2015-10-25 21:36:53 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://selt-michael-koscak.c9.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 129.255.224.166 at 2015-10-25 21:36:53 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 47ms (Views: 39.8ms | ActiveRecord: 0.3ms)

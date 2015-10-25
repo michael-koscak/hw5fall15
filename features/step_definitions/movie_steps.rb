@@ -46,13 +46,12 @@ Given /^I am on the RottenPotatoes home page$/ do
 # Add a declarative step here for populating the DB with movies.
 
 Given /the following movies have been added to RottenPotatoes:/ do |movies_table|
-  
+  pending  # Remove this statement when you finish implementing the test step
   movies_table.hashes.each do |movie|
     # Each returned movie will be a hash representing one row of the movies_table
     # The keys will be the table headers and the values will be the row contents.
     # Entries can be directly to the database with ActiveRecord methods
     # Add the necessary Active Record call(s) to populate the database.
-    Movie.create!(movie)
   end
 end
 
@@ -60,30 +59,15 @@ When /^I have opted to see movies rated: "(.*?)"$/ do |arg1|
   # HINT: use String#split to split up the rating_list, then
   # iterate over the ratings and check/uncheck the ratings
   # using the appropriate Capybara command(s)
-  for arg in arg1.split(', ')
-    check('ratings['+arg+']')
-  end
+  pending  #remove this statement after implementing the test step
 end
 
 Then /^I should see only movies rated: "(.*?)"$/ do |arg1|
-    #remove this statement after implementing the test step
-    bool = false
-    rows = page.all("table#movies tbody tr td[2]").map {|t| t.text}.each do |r|
-     bool = false
-     arg1.split(", ").each do |rating|
-       if r == rating
-           bool = true;
-           break
-       end
-     end
-     break if bool == false
-    end
+  pending  #remove this statement after implementing the test step
 end
 
 Then /^I should see all of the movies$/ do
-    #remove this statement after implementing the test step
-    rows = page.all("table#movies tbody tr td[1]").map {|t| t.text}
-    rows.size == Movie.all.count
+  pending  #remove this statement after implementing the test step
 end
 
 
